@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LaoJiang</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<h1>LAO JIANG</h1>
+			</div>
+		</div>
+		
+		<div id="content">
+				<!-- 身份验证 -->
+				<form action="login" method="post" data-ajax="false">
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username">
+					<label for="password">密码：</label>
+					<input type="password" name="password" id="password">
+					<input type="submit" id="login" value="确认">
+				</form>
+				
+				<!-- 写文章 -->
+				<form action="myArticle" method="post" data-ajax="false">
+					<label for="title">标题</label>
+					<input type="text" name="article.title" id="title">
+					<label for="context">内容</label>
+					<input type="text" name="article.content" id="content">
+					<input type="submit" value="上传文章">
+				</form>
+							
+				<!-- 读文章  -->
+				<h3 id="my_article_title"></h3>
+				<div id="my_article_content"></div>				
+
+		</div>
+	</div>
+</body>
+</html>
