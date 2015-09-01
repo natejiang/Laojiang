@@ -4,14 +4,26 @@
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
 	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
 	<package name="laojiang" extends="struts-default">
-		<action name="login" class="loginAction">
-			<result name="error">/jsp/error.jsp</result>
+		<action name="page" class="pageAction">
+			<result name="test">test.html</result>
+			<result name="home">index.html</result>
 			<result name="success">/jsp/welcome.jsp</result>
 		</action>
-		<action name="myArticle" class="myArticleAction" method="add">
+		<action name="login" class="loginAction">
 			<result name="error">/jsp/error.jsp</result>
-			<result name="success">/jsp/welcome.jsp</result>		
+			<result name="success">manager.html</result>
 		</action>
+	</package>
+	
+	<package name="myarticle" extends="struts-default" namespace="/myarticle">
+		<action name="*_*" class="{1}Action" method="{2}">
+			<result name="error">/jsp/error.jsp</result>
+			<result name="success">/jsp/blog.jsp</result>		
+			<result name="delete_success" type="chain">myArticle_findAllOrderByDate</result>
+			<result name="add_success" type="chain">myArticle_findAllOrderByDate</result>
+		</action>	
 	</package>	
+	
 </struts>

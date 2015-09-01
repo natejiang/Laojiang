@@ -11,7 +11,11 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="my_article")
-public class MyArticle {
+public class MyArticle implements java.io.Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5654074928232755858L;
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
@@ -19,6 +23,9 @@ public class MyArticle {
 	private String content;
 	@Temporal(TemporalType.DATE)
 	private Date date = new Date();
+	@Temporal(TemporalType.TIME)
+	private Date time = new Date();
+	
 	public int getId() {
 		return id;
 	}
@@ -43,5 +50,12 @@ public class MyArticle {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	public Date getTime() {
+		return time;
+	}
+	public void setTime(Date time) {
+		this.time = time;
+	}
+	
 
 }

@@ -38,7 +38,7 @@
 				<props>
 					<!-- 指定Hibernate的连接方言 -->
 					<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
-					<prop key="hibernate.hbm2ddl.auto">create</prop>
+					<prop key="hibernate.hbm2ddl.auto">update</prop>
 					<prop key="hibernate.show_sql">true</prop>
 					<prop key="hibernate.format_sql">true</prop>
 				</props>
@@ -71,6 +71,8 @@
 			 scope="prototype" p:ms-ref="myService" />
 		<bean id="myArticleAction" class="com.laojiang.action.MyArticleAction"
 			scope="prototype" p:myArticleService-ref="myArticleService"/>
+		<bean id="pageAction" class="com.laojiang.action.PageAction"/>
+
 			 
 		<!-- 配置Service组件,并将DAO组件注入Service组件 -->
 		<bean id="myService" class="com.laojiang.service.impl.MyServiceImpl" />		

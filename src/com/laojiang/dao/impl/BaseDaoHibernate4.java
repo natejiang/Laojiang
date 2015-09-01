@@ -42,14 +42,9 @@ public class BaseDaoHibernate4<T> implements BaseDao<T> {
 	@Override
 	public void delete(Class<T> entityClazz, Serializable id) {
 		getSessionFactory().getCurrentSession()
-			.createQuery("delete" + entityClazz.getSimpleName() + " en where en.id = ?0")
+			.createQuery("delete " + entityClazz.getSimpleName() + " en where en.id = ?0")
 			.setParameter("0", id)
 			.executeUpdate();
-	}
-	//获取所有实体
-	@Override
-	public List<T> findAll(Class<T> entityClazz) {
-		return find("select en from " + entityClazz.getSimpleName() + " en");
 	}
 	//获取实体总数
 	@Override

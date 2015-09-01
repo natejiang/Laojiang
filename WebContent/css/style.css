@@ -1,8 +1,22 @@
 @CHARSET "UTF-8";
-
+body,html{
+	padding:0px;
+	border:0px;
+	margin:0px;
+	font-family: 'Open Sans', sans-serif;
+	}
 li {
 		list-style-type:none;
+	}
+/* test.html*/
+.content{
+	width:800px;
 }
 
+/*blog.jsp*/
+.blog{
+	width:600px;
+	padding:20px;
+	background-color:#dddddd;
+}
 
-/*==== header ====*/

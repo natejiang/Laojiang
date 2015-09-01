@@ -7,6 +7,11 @@
 <title>ERROR</title>
 </head>
 <body>
-
+<div id="header">
+			<div id="logo">
+				<a href="/LaoJiang/page?page=home">HOME</a>
+				<h1>LAO JIANG'S BLOG</h1>
+			</div>
+</div>
 </body>
 </html>
