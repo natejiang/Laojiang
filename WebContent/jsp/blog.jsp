@@ -18,12 +18,12 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="/LaoJiang/page?page=home">Lao<span> Jiang</span></a><small>Life Study and Work</small></h1>
+        <h1><a href="/LaoJiang/mypage/page?page=home">Lao<span> Jiang</span></a><small>Life Study and Work</small></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
         <ul>
-          <li><a href="/LaoJiang/page?page=home">Home</a></li>
+          <li><a href="/LaoJiang/mypage/page?page=home">Home</a></li>
           <li><a href="#">Support</a></li>
           <li><a href="#">About Us</a></li>
           <li class="active"><a href="#">Blog</a></li>
@@ -53,7 +53,7 @@
           <h2><span><s:property value="title" escape="false" /></span></h2><div class="clr"></div>
           <p>Posted by <a href="#">LaoJiang</a>  <span>&nbsp;&bull;&nbsp;</span>  Filed under  <a href="#">blog</a></p>
           <p><s:property value="content" escape="false"/></p>
-          <p>Tagged: <a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a></p>
+          <p>Tagged: <a href="#">orci</a></p>
           <p><a href="#"><strong>Comments (0)</strong></a>  <span>&nbsp;&bull;&nbsp;</span>  <s:property value="date"/>&nbsp;<s:property value="time"/>  <span>&nbsp;&bull;&nbsp;</span>  <a href="#"><strong>Edit</strong></a></p>        
      	  <s:if test="#session.username=='jiangnan'">
      	  <p><a href="myArticle_deleteById?id=<s:property value="id"/>" onclick="javascript: return confirm('真的要删除吗？');">Delete</a></p>
@@ -113,10 +113,10 @@
           <div class="clr"></div>
           <ul class="sb_menu">
             <li><a href="/LaoJiang/page?page=home">Home</a></li>
-            <li><a href="#">TemplateInfo</a></li>
-            <li><a href="#">Style Demo</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About Us</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Archives</a></li>
+            <li><a href="#">Contacts Us</a></li>
             <li><a href="#" title="Website Templates">Web Templates</a></li>
           </ul>
         </div>

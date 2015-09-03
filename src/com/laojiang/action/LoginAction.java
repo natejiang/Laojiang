@@ -30,7 +30,7 @@ public class LoginAction extends ActionSupport
 	public void setMs(MyService ms) {
 		this.ms = ms;
 	}
-	public String execute() throws Exception
+	public String login() throws Exception
 	{
 		if (ms.validLogin(getUsername(),getPassword())>0)
 		{
@@ -40,4 +40,12 @@ public class LoginAction extends ActionSupport
 		}
 		return ERROR;
 	}
+	
+	public String logout() throws Exception
+	{
+		ActionContext ctx = ActionContext.getContext();
+		ctx.getSession().put("username", "");
+		return "logout";
+	}
+	
 }

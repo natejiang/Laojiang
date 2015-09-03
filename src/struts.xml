@@ -4,17 +4,22 @@
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
 	<constant name="struts.i18n.encoding" value="UTF-8"/>
-	
-	<package name="laojiang" extends="struts-default">
-		<action name="page" class="pageAction">
-			<result name="test">test.html</result>
-			<result name="home">index.html</result>
+	<!-- 与页面跳转相关控制器 -->
+	<package name="mypage" extends="struts-default" namespace="/mypage">
+		<action name="page" class="pageAction" >
+			<result name="home">/index.html</result>
 			<result name="success">/jsp/welcome.jsp</result>
-		</action>
-		<action name="login" class="loginAction">
 			<result name="error">/jsp/error.jsp</result>
-			<result name="success">manager.html</result>
 		</action>
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="error">/jsp/error.jsp</result>
+			<result name="success">/jsp/manager.jsp</result>
+			<result name="logout" type="redirect">
+				<param name="location">/manager_login.html</param>
+			</result>
+		</action>
+
+		
 	</package>
 	
 	<package name="myarticle" extends="struts-default" namespace="/myarticle">
