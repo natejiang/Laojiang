@@ -29,17 +29,17 @@
 		</div>	
 		<div id="content" class="content">		
 				<!-- 写文章 -->
-				<form action="myarticle/myArticle_add" method="post" >
+				<form action="/LaoJiang/myarticle/myArticle_add" method="post" >
 					<div><label for="title">TITLE:</label>
 					<input type="text" name="article.title"></div>
 					<textarea name="article.content"  id="mytextarea" ></textarea>
 					<input type="submit" value="上传文章">
 				</form>							
 				<!-- 读文章  -->
-				<form action="myarticle/myArticle_findAllOrderByDate" method="post" data-ajax="false">
+				<form action="/LaoJiang/myarticle/myArticle_findAllOrderByDate" method="post" data-ajax="false">
 					<input type="submit" value="所有文章列表">
 				</form>				
-				<form action="myarticle/myArticle_findByPageOrderByDate" method="post" data-ajax="false">
+				<form action="/LaoJiang/myarticle/myArticle_findByPageOrderByDate" method="post" data-ajax="false">
 					<label>page:</label>
 					<input type="text" name="pageNo" >
 					<input type="submit" value="分页文章列表">
