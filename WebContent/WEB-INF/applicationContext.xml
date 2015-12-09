@@ -16,9 +16,9 @@
 		<!-- 定义数据源Bean,使用C3P0数据源实现,并注入数据源的必要信息 -->
 		<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 			p:driverClass="com.mysql.jdbc.Driver"
-			p:jdbcUrl="jdbc:mysql://192.168.122.64/hibernate"
-			p:user="hibernate"
-			p:password="hibernate"
+			p:jdbcUrl="jdbc:mysql://222.35.41.78/laojiang"
+			p:user="laojiang"
+			p:password="Cttbj10050"
 			p:maxPoolSize="40"
 			p:minPoolSize="2"
 			p:initialPoolSize="2"

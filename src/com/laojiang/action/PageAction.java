@@ -1,6 +1,5 @@
 package com.laojiang.action;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class PageAction extends ActionSupport
